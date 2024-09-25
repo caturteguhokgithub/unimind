@@ -1,19 +1,28 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import GlobalStyles from '@mui/material/GlobalStyles';
+'use client';
 
-import { AuthGuard } from '@/components/auth/auth-guard';
-import { MainNav } from '@/components/dashboard/layout/main-nav';
-import { SideNav } from '@/components/dashboard/layout/side-nav';
+import * as React from 'react';
+import { Container } from '@mui/material';
+import Box from '@mui/material/Box';
+// import Container from '@mui/material/Container';
+import GlobalStyles from '@mui/material/GlobalStyles';
+import { loadCSS } from 'fg-loadcss';
+
+import { SideNav } from './side-nav';
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
-export default function Layout({ children }: LayoutProps): React.JSX.Element {
+export default function DashboardLayout({ children }: LayoutProps): React.JSX.Element {
+  React.useEffect(() => {
+    const node = loadCSS('https://use.fontawesome.com/releases/v6.5.1/css/all.css');
+    return () => {
+      node.parentNode!.removeChild(node);
+    };
+  }, []);
+
   return (
-    <AuthGuard>
+    <>
       <GlobalStyles
         styles={{
           body: {
@@ -27,8 +36,9 @@ export default function Layout({ children }: LayoutProps): React.JSX.Element {
         }}
       />
       <Box
+        bgcolor="#fafafb"
         sx={{
-          bgcolor: 'var(--mui-palette-background-default)',
+          // bgcolor: 'var(--mui-palette-background-default)',
           display: 'flex',
           flexDirection: 'column',
           position: 'relative',
@@ -37,14 +47,16 @@ export default function Layout({ children }: LayoutProps): React.JSX.Element {
       >
         <SideNav />
         <Box sx={{ display: 'flex', flex: '1 1 auto', flexDirection: 'column', pl: { lg: 'var(--SideNav-width)' } }}>
-          <MainNav />
+          {/* <MainNav /> */}
           <main>
-            <Container maxWidth="xl" sx={{ py: '64px' }}>
-              {children}
-            </Container>
+            <Box p={4}>
+              <Container maxWidth="xl" sx={{ py: '64px' }}>
+                {children}
+              </Container>
+            </Box>
           </main>
         </Box>
       </Box>
-    </AuthGuard>
+    </>
   );
 }

@@ -1,5 +1,7 @@
-import { redirect } from 'next/navigation';
+import * as React from 'react';
 
-export default function Page(): never {
-  redirect('/dashboard');
+import PageDashboard from './dashboard/page';
+
+export default function Home() {
+  return <PageDashboard />;
 }
