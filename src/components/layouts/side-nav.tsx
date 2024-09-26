@@ -91,7 +91,7 @@ export function SideNav(): React.JSX.Element {
       <Box component="nav" sx={{ flex: '1 1 auto', px: 2, py: 4 }} overflow="auto">
         <Stack spacing={3} sx={{ listStyle: 'none', m: 0, p: 0 }}>
           {MenuItems.map((menu, groupIndex) => (
-            <Box>
+            <Box key={groupIndex}>
               <Typography
                 component="h3"
                 fontWeight={600}
