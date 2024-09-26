@@ -1,7 +1,9 @@
 import * as React from 'react';
 import type { Metadata, Viewport } from 'next';
 
-import '@/styles/global.css';
+import '@/styles/global.scss';
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
 
 import { LocalizationProvider } from '@/components/core/localization-provider';
 import { ThemeProvider } from '@/components/core/theme-provider/theme-provider';

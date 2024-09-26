@@ -1,6 +1,7 @@
 import * as React from 'react';
-import DashboardLayout from '@/layouts/layout';
+
+import DashboardLayout from '@/components/layouts/layout';
 
 export default function PageReport(): React.JSX.Element {
-  return <DashboardLayout>Report</DashboardLayout>;
+  return <DashboardLayout title="Report">Report</DashboardLayout>;
 }

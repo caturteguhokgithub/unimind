@@ -1,6 +1,7 @@
 import * as React from 'react';
-import DashboardLayout from '@/layouts/layout';
+
+import DashboardLayout from '@/components/layouts/layout';
 
 export default function PageBrandComparison(): React.JSX.Element {
-  return <DashboardLayout>Brand</DashboardLayout>;
+  return <DashboardLayout title="Brand Comparison">Brand</DashboardLayout>;
 }

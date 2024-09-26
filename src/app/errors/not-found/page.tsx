@@ -7,10 +7,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { ArrowLeft as ArrowLeftIcon } from '@phosphor-icons/react/dist/ssr/ArrowLeft';
 
-import { config } from '@/config';
 import { paths } from '@/paths';
-
-export const metadata = { title: `Not found | Errors | ${config.site.name}` } satisfies Metadata;
 
 export default function NotFound(): React.JSX.Element {
   return (
@@ -21,7 +18,7 @@ export default function NotFound(): React.JSX.Element {
             component="img"
             alt="Under development"
             src="/assets/error-404.png"
-            sx={{ display: 'inline-block', height: 'auto', maxWidth: '100%', width: '400px' }}
+            sx={{ display: 'inline-block', height: 'auto', maxWidth: '100%', width: '200px' }}
           />
         </Box>
         <Typography variant="h3" sx={{ textAlign: 'center' }}>
@@ -35,8 +32,9 @@ export default function NotFound(): React.JSX.Element {
           href={paths.home}
           startIcon={<ArrowLeftIcon fontSize="var(--icon-fontSize-md)" />}
           variant="contained"
+          color="primary"
         >
-          Go back to home
+          Go back to dashboard
         </Button>
       </Stack>
     </Box>

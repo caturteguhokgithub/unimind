@@ -7,13 +7,15 @@ import Box from '@mui/material/Box';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import { loadCSS } from 'fg-loadcss';
 
+import { HeaderNav } from './header';
 import { SideNav } from './side-nav';
 
 interface LayoutProps {
   children: React.ReactNode;
+  title: string;
 }
 
-export default function DashboardLayout({ children }: LayoutProps): React.JSX.Element {
+export default function DashboardLayout({ children, title }: LayoutProps): React.JSX.Element {
   React.useEffect(() => {
     const node = loadCSS('https://use.fontawesome.com/releases/v6.5.1/css/all.css');
     return () => {
@@ -26,7 +28,7 @@ export default function DashboardLayout({ children }: LayoutProps): React.JSX.El
       <GlobalStyles
         styles={{
           body: {
-            '--MainNav-height': '56px',
+            // '--MainNav-height': '56px',
             '--MainNav-zIndex': 1000,
             '--SideNav-width': '280px',
             '--SideNav-zIndex': 1100,
@@ -47,10 +49,10 @@ export default function DashboardLayout({ children }: LayoutProps): React.JSX.El
       >
         <SideNav />
         <Box sx={{ display: 'flex', flex: '1 1 auto', flexDirection: 'column', pl: { lg: 'var(--SideNav-width)' } }}>
-          {/* <MainNav /> */}
+          <HeaderNav title={title} />
           <main>
             <Box p={4}>
-              <Container maxWidth="xl" sx={{ py: '64px' }}>
+              <Container maxWidth="xl" sx={{ py: 5 }}>
                 {children}
               </Container>
             </Box>
