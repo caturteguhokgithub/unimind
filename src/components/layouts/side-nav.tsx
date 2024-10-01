@@ -111,7 +111,7 @@ export function SideNav(): React.JSX.Element {
                           component={Link}
                           href={item.subItems ? '' : item.path}
                           onClick={() => handleClick(groupIndex, itemIndex, !item.subItems)}
-                          sx={{ gap: 1, bgcolor: isActive(item.path) ? grey[200] : 'transparent' }}
+                          sx={{ gap: 1, bgcolor: isActive(item.path) ? grey[200] : 'transparent', borderRadius: 1 }}
                         >
                           <ListItemAvatar sx={{ minWidth: 0 }}>
                             <IconFA
@@ -139,6 +139,7 @@ export function SideNav(): React.JSX.Element {
                                   sx={{
                                     pl: 6,
                                     bgcolor: pathname === subItem.path ? alpha(blue[100], 0.4) : 'transparent',
+                                    borderRadius: 1,
                                   }}
                                 >
                                   <ListItemText>

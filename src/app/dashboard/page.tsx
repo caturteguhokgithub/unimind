@@ -12,11 +12,11 @@ import DashboardBlock from './partials/block';
 import { CardSentiment } from './partials/cardSentiment';
 import { TopicBreakdown } from './partials/topic-breakdown';
 
-export default function PageDashboard(): React.JSX.Element {
+export default function PageDashboard({ title }: { title: string }): React.JSX.Element {
   return (
-    <DashboardLayout title="Dashboard">
+    <DashboardLayout title={title}>
       <Stack spacing={4}>
-        <DashboardBlock title="Summary Dashboard">
+        <DashboardBlock title="Summary Dashboard" spacingTight>
           <Grid container spacing={2}>
             <Grid item lg={4} sm={6} xs={12}>
               <CardSentiment
@@ -51,7 +51,7 @@ export default function PageDashboard(): React.JSX.Element {
             </Grid>
           </Grid>
         </DashboardBlock>
-        <DashboardBlock title="Insight Overview">
+        <DashboardBlock title="Insight Overview" spacingTight>
           <Grid container spacing={2}>
             <Grid item lg={6} xs={12}>
               <InsightMention sx={{ height: '100%' }} />
@@ -61,7 +61,7 @@ export default function PageDashboard(): React.JSX.Element {
             </Grid>
           </Grid>
         </DashboardBlock>
-        <DashboardBlock title="Sentiment Summary">
+        <DashboardBlock title="Sentiment Summary" spacingTight>
           <Grid container spacing={2}>
             <Grid item lg={6} xs={12}>
               <SentimentMention sx={{ height: '100%' }} />
@@ -71,13 +71,13 @@ export default function PageDashboard(): React.JSX.Element {
             </Grid>
           </Grid>
         </DashboardBlock>
-        <DashboardBlock title="Audience Talk About">
+        <DashboardBlock title="Audience Talk About" spacingTight>
           <AudienceTalk />
         </DashboardBlock>
-        <DashboardBlock title="Topic Breakdown">
+        <DashboardBlock title="Topic Breakdown" spacingTight>
           <TopicBreakdown />
         </DashboardBlock>
-        <DashboardBlock title="Mention Details">Mention Details</DashboardBlock>
+        {/* <DashboardBlock title="Mention Details">Mention Details</DashboardBlock> */}
       </Stack>
     </DashboardLayout>
   );

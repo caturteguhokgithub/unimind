@@ -53,19 +53,19 @@ export const MenuItems: Group[] = [
     items: [
       {
         text: 'Manage Dashboard',
-        path: '/manage-dashboard',
+        path: '/manage',
         icon: 'chart-simple',
         subItems: [
-          { text: 'Manage Product', path: '/errors/not-found' },
-          { text: 'Manage Article', path: '/errors/not-found' },
-          { text: 'Manage Post', path: '/errors/not-found' },
-          { text: 'Manage Hashtag', path: '/errors/not-found' },
-          { text: 'Social Media Account', path: '/errors/not-found' },
-          { text: 'Social Media Grouping', path: '/errors/not-found' },
-          { text: 'Alert Notification', path: '/errors/not-found' },
+          { text: 'Manage Product', path: '/manage/product' },
+          { text: 'Manage Article', path: '/manage/article' },
+          { text: 'Manage Post', path: '/manage/post' },
+          { text: 'Manage Hashtag', path: '/manage/hashtag' },
+          { text: 'Social Media Account', path: '/manage/account' },
+          { text: 'Social Media Grouping', path: '/manage/grouping' },
+          { text: 'Alert Notification', path: '/manage/alert' },
         ],
       },
-      { text: 'Setting', path: '/errors/not-found', icon: 'gear' },
+      { text: 'Setting', path: '/setting', icon: 'gear' },
       {
         text: 'Account',
         path: '/account',

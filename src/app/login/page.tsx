@@ -117,6 +117,7 @@ export default function PageLogin(): React.JSX.Element {
             </Box>
           </Stack>
           <Button
+            href="/news-media/overview"
             variant="contained"
             color="primary"
             sx={{ height: 56, mt: 1, borderRadius: 1, fontSize: '1rem', fontWeight: 600, letterSpacing: 1 }}

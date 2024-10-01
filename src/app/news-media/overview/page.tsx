@@ -1,7 +1,6 @@
 import * as React from 'react';
-
-import DashboardLayout from '@/components/layouts/layout';
+import PageDashboard from '@/app/dashboard/page';
 
 export default function PageOverview(): React.JSX.Element {
-  return <DashboardLayout title="News Media / Overview">News Media / Overview</DashboardLayout>;
+  return <PageDashboard title="News Media / Overview" />;
 }

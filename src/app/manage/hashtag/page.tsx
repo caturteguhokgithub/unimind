@@ -1,11 +1,11 @@
-import React from 'react';
+import * as React from 'react';
 
 import EmptyState from '@/components/emptyState';
 import DashboardLayout from '@/components/layouts/layout';
 
-export default function PageProfile(): React.JSX.Element {
+export default function PageManageHashtag(): React.JSX.Element {
   return (
-    <DashboardLayout title="Profile">
+    <DashboardLayout title="Manage Dashboard / Manage Hashtag">
       <EmptyState />
     </DashboardLayout>
   );
