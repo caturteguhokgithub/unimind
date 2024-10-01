@@ -36,7 +36,7 @@ export function SideNav(): React.JSX.Element {
       });
     });
     setOpen(newOpen);
-  }, [pathname, MenuItems]);
+  }, [pathname]);
 
   const handleClick = (groupIndex: number, itemIndex: number, isParent: boolean) => {
     const key = `${groupIndex}-${itemIndex}`;
