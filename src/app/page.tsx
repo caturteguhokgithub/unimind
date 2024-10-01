@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import PageDashboard from './dashboard/page';
+import PageLogin from './login/page';
 
 export default function Home() {
-  return <PageDashboard />;
+  return <PageLogin />;
 }

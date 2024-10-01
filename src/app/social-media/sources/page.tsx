@@ -3,5 +3,5 @@ import * as React from 'react';
 import DashboardLayout from '@/components/layouts/layout';
 
 export default function PageOverview(): React.JSX.Element {
-  return <DashboardLayout title="News Media / Sources">News Media / Sources</DashboardLayout>;
+  return <DashboardLayout title="Social Media / Sources">Social Media / Sources</DashboardLayout>;
 }

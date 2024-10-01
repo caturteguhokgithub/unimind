@@ -1,3 +1,4 @@
+import { blue } from '@mui/material/colors';
 import type { ColorSystemOptions } from '@mui/material/styles';
 
 import { california, kepple, neonBlue, nevada, redOrange, shakespeare, stormGrey } from './colors';
@@ -103,9 +104,9 @@ export const colorSchemes = {
       neutral: { ...stormGrey },
       primary: {
         ...neonBlue,
-        light: neonBlue[400],
-        main: neonBlue[500],
-        dark: neonBlue[600],
+        light: blue[400],
+        main: blue[500],
+        dark: blue[600],
         contrastText: 'var(--mui-palette-common-white)',
       },
       secondary: {
