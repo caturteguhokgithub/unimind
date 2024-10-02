@@ -264,7 +264,7 @@ const App: React.FC = () => (
   >
     <Table<DataType>
       columns={columns}
-      expandable={{ expandedRowRender, defaultExpandedRowKeys: ['0'] }}
+      expandable={{ expandedRowRender }}
       dataSource={dataSource}
       showSorterTooltip={{ target: 'sorter-icon' }}
       onChange={onChange}

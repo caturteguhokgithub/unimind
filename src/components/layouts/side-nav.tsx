@@ -128,8 +128,9 @@ export function SideNav(): React.JSX.Element {
                           </ListItemText>
                           {item.subItems ? open[`${groupIndex}-${itemIndex}`] ? <CaretUp /> : <CaretDown /> : null}
                         </ListItem>
+                        {/* <Collapse in={open[`${groupIndex}-${itemIndex}`]} timeout="auto" mountOnEnter unmountOnExit></Collapse> */}
                         {item.subItems && (
-                          <Collapse in={open[`${groupIndex}-${itemIndex}`]} timeout="auto" mountOnEnter unmountOnExit>
+                          <Collapse in={true} timeout="auto" mountOnEnter unmountOnExit>
                             <List component="div" disablePadding>
                               {item.subItems.map((subItem) => (
                                 <ListItem

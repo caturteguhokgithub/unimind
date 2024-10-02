@@ -47,17 +47,17 @@ export default function DashboardLayout({ children, title }: LayoutProps): React
           minHeight: '100%',
         }}
       >
-        {/* <SideNav /> */}
-        {/* <Box sx={{ display: 'flex', flex: '1 1 auto', flexDirection: 'column', pl: { lg: 'var(--SideNav-width)' } }}> */}
-        <HeaderNav title={title} isDashboardView />
-        <main>
-          <Box p={4}>
-            <Container maxWidth="xl" sx={{ py: 5 }}>
-              {children}
-            </Container>
-          </Box>
-        </main>
-        {/* </Box> */}
+        <SideNav />
+        <Box sx={{ display: 'flex', flex: '1 1 auto', flexDirection: 'column', pl: { lg: 'var(--SideNav-width)' } }}>
+          <HeaderNav title={title} />
+          <main>
+            <Box p={4}>
+              <Container maxWidth="xl" sx={{ py: 5 }}>
+                {children}
+              </Container>
+            </Box>
+          </main>
+        </Box>
       </Box>
     </>
   );

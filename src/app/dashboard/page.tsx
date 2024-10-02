@@ -10,6 +10,7 @@ import DashboardLayout from '../../components/layouts/layout';
 import { AudienceTalk } from './partials/audience-talk';
 import DashboardBlock from './partials/block';
 import { CardSentiment } from './partials/cardSentiment';
+import { MentionDetail } from './partials/mention';
 import { TopicBreakdown } from './partials/topic-breakdown';
 
 export default function PageDashboard({ title }: { title: string }): React.JSX.Element {
@@ -77,7 +78,9 @@ export default function PageDashboard({ title }: { title: string }): React.JSX.E
         <DashboardBlock title="Topic Breakdown" spacingTight>
           <TopicBreakdown />
         </DashboardBlock>
-        {/* <DashboardBlock title="Mention Details">Mention Details</DashboardBlock> */}
+        <DashboardBlock title="Mention Details">
+          <MentionDetail />
+        </DashboardBlock>
       </Stack>
     </DashboardLayout>
   );
